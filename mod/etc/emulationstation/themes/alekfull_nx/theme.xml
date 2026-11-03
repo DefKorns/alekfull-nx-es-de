@@ -1,0 +1,256 @@
+<!--
+theme name:             Alekfull NX for the NES/SNES Classic EmulationStation
+created by:             fagnerpc
+ported from:            https://github.com/fagnerpc/Alekfull-NX
+ES-DE edition by:       anthonycaccese (https://github.com/anthonycaccese/alekfull-nx-es-de)
+ported to ES 2.12 by:   DefKorns
+license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
+-->
+
+<theme>
+	<formatVersion>4</formatVersion>
+
+	<view name="system">
+		<image name="background" extra="true">
+			<path>./_inc/images/space.png</path>
+			<tile>true</tile>
+			<color>2D2D2D</color>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<zIndex>0</zIndex>
+		</image>
+		<image name="background-art" extra="true">
+			<path>./_inc/systems/backgrounds/${system.theme}.jpg</path>
+			<default>./_inc/systems/backgrounds/_default.jpg</default>
+			<pos>0 0</pos>
+			<size>1 0</size>
+			<zIndex>1</zIndex>
+		</image>
+		<image name="background-art-mask" extra="true">
+			<path>./_inc/images/space.png</path>
+			<tile>true</tile>
+			<color>2D2D2D</color>
+			<origin>0 1</origin>
+			<pos>0 1</pos>
+			<size>1 0.1</size>
+			<zIndex>2</zIndex>
+		</image>
+		<image name="background-art-gradient" extra="true">
+			<path>./_inc/images/background-art-gradient-dark.png</path>
+			<pos>0 0.4815</pos>
+			<size>1 0.463</size>
+			<zIndex>3</zIndex>
+		</image>
+
+		<image name="selector-shadow" extra="true">
+			<path>./_inc/images/system-carousel-selector-shadow.png</path>
+			<origin>0.5 0.5</origin>
+			<pos>0.2271 0.7153</pos>
+			<size>0.2031 0.3611</size>
+			<zIndex>9</zIndex>
+		</image>
+		<carousel name="systemcarousel">
+			<type>horizontal</type>
+			<pos>-0.573 0.5556</pos>
+			<size>1.6 0.3194</size>
+			<color>00000000</color>
+			<logoSize>0.15625 0.2778</logoSize>
+			<logoScale>1.15</logoScale>
+			<logoAlignment>center</logoAlignment>
+			<maxLogoCount>9</maxLogoCount>
+			<zIndex>10</zIndex>
+		</carousel>
+		<image name="logo">
+			<path>./_inc/systems/carousel-icons/${system.theme}.png</path>
+		</image>
+		<image name="selector" extra="true">
+			<path>./_inc/images/system-carousel-selector.svg</path>
+			<color>00C3E3</color>
+			<origin>0.5 0.5</origin>
+			<pos>0.2271 0.7153</pos>
+			<size>0.1823 0.3241</size>
+			<zIndex>11</zIndex>
+		</image>
+		<text name="system-name" extra="true">
+			<text>${system.fullName}</text>
+			<pos>0 0.8760</pos>
+			<size>0.4542 0.0370</size>
+			<color>EEEEEE</color>
+			<fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+			<fontSize>0.0204</fontSize>
+			<alignment>center</alignment>
+			<forceUppercase>true</forceUppercase>
+			<zIndex>12</zIndex>
+		</text>
+		<text name="systemInfo">
+			<origin>0.5 1</origin>
+			<pos>0.2271 0.9380</pos>
+			<size>0.3906 0.0296</size>
+			<color>CCCCCC</color>
+			<fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+			<fontSize>0.0296</fontSize>
+			<alignment>center</alignment>
+			<zIndex>12</zIndex>
+		</text>
+		<helpsystem name="help">
+			<origin>1 1</origin>
+			<pos>0.9479 0.9306</pos>
+			<fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+			<fontSize>0.0241</fontSize>
+			<textColor>999999</textColor>
+			<iconColor>BBBBBB</iconColor>
+		</helpsystem>
+	</view>
+
+	<view name="detailed,video">
+		<sound name="launch">
+			<path>./_inc/sounds/launch.wav</path>
+		</sound>
+		<sound name="back">
+			<path>./_inc/sounds/back.wav</path>
+		</sound>
+		<sound name="menuOpen">
+			<path>./_inc/sounds/select.wav</path>
+		</sound>
+
+		<image name="background">
+			<path>./_inc/images/space.png</path>
+			<tile>true</tile>
+			<color>2D2D2D</color>
+			<pos>0 0</pos>
+			<size>1 1</size>
+		</image>
+		<image name="background-art" extra="true">
+			<path>./_inc/systems/backgrounds/${system.theme}.jpg</path>
+			<default>./_inc/systems/backgrounds/_default.jpg</default>
+			<color>FFFFFF0D</color>
+			<pos>0 0</pos>
+			<size>1 0</size>
+			<zIndex>1</zIndex>
+		</image>
+		<image name="game-list-background-shadow" extra="true">
+			<path>./_inc/images/16-9-gamelist-background-shadow.png</path>
+			<origin>0.5 0.5</origin>
+			<pos>0.2568 0.4606</pos>
+			<size>0.4401 0.7963</size>
+			<zIndex>2</zIndex>
+		</image>
+		<image name="game-list-background" extra="true">
+			<path>./_inc/images/16-9-gamelist-background-dark-medium.svg</path>
+			<pos>0.0495 0.0856</pos>
+			<size>0.4141 0.75</size>
+			<zIndex>3</zIndex>
+		</image>
+		<textlist name="gamelist">
+			<pos>0.0823 0.1150</pos>
+			<size>0.3490 0.7000</size>
+			<fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+			<fontSize>0.025</fontSize>
+			<lineSpacing>1.7545</lineSpacing>
+			<selectorHeight>0.0398</selectorHeight>
+			<selectorOffsetY>-0.0021</selectorOffsetY>
+			<selectorColor>777777</selectorColor>
+			<selectedColor>FFFFFF</selectedColor>
+			<primaryColor>777777</primaryColor>
+			<secondaryColor>777777</secondaryColor>
+			<horizontalMargin>0.0083</horizontalMargin>
+			<scrollSound>./_inc/sounds/scroll.wav</scrollSound>
+			<zIndex>20</zIndex>
+		</textlist>
+		<image name="system-logo" extra="true">
+			<path>./_inc/systems/logos/${system.theme}.svg</path>
+			<color>CCCCCC</color>
+			<origin>0 0.5</origin>
+			<pos>0.0573 0.9167</pos>
+			<maxSize>0.1302 0.0463</maxSize>
+			<zIndex>20</zIndex>
+		</image>
+
+		<image name="md_image">
+			<origin>0.5 0.5</origin>
+			<pos>0.7258 0.3194</pos>
+			<maxSize>0.4490 0.4491</maxSize>
+			<zIndex>20</zIndex>
+		</image>
+		<image name="metadata-shadow" extra="true">
+			<path>./_inc/images/gamelist-metadata-background-shadow-base.png</path>
+			<origin>0.5 0.5</origin>
+			<pos>0.7258 0.6065</pos>
+			<size>0.4333 0.0671</size>
+			<zIndex>20</zIndex>
+		</image>
+		<image name="metadata-background" extra="true">
+			<path>./_inc/images/gamelist-metadata-background-dark-base.svg</path>
+			<origin>0.5 0.5</origin>
+			<pos>0.7258 0.6065</pos>
+			<size>0.4229 0.0486</size>
+			<zIndex>21</zIndex>
+		</image>
+		<rating name="md_rating">
+			<origin>0.5 0.5</origin>
+			<pos>0.5664 0.6060</pos>
+			<size>0 0.0185</size>
+			<filledPath>./_inc/images/icon-star-filled.svg</filledPath>
+			<unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
+			<color>BBBBBB</color>
+			<zIndex>25</zIndex>
+		</rating>
+		<text name="md_developer">
+			<visible>true</visible>
+			<origin>0 0.5</origin>
+			<pos>0.6315 0.6060</pos>
+			<size>0.1042 0.0185</size>
+			<fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+			<fontSize>0.0185</fontSize>
+			<color>BBBBBB</color>
+			<alignment>center</alignment>
+			<zIndex>25</zIndex>
+		</text>
+		<text name="md_genre">
+			<origin>0 0.5</origin>
+			<pos>0.7513 0.6060</pos>
+			<size>0.1833 0.0185</size>
+			<fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+			<fontSize>0.0185</fontSize>
+			<color>BBBBBB</color>
+			<alignment>center</alignment>
+			<zIndex>25</zIndex>
+		</text>
+		<text name="md_description">
+			<origin>0.5 1</origin>
+			<pos>0.7258 0.8380</pos>
+			<size>0.4229 0.1204</size>
+			<fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
+			<fontSize>0.0241</fontSize>
+			<lineSpacing>1.5</lineSpacing>
+			<color>FFFFFF</color>
+			<zIndex>25</zIndex>
+		</text>
+
+		<text name="logoText"><visible>false</visible></text>
+		<text name="md_name"><visible>false</visible></text>
+		<text name="md_lbl_rating"><visible>false</visible></text>
+		<text name="md_lbl_releasedate"><visible>false</visible></text>
+		<text name="md_lbl_developer"><visible>false</visible></text>
+		<text name="md_lbl_publisher"><visible>false</visible></text>
+		<text name="md_lbl_genre"><visible>false</visible></text>
+		<text name="md_lbl_players"><visible>false</visible></text>
+		<text name="md_lbl_lastplayed"><visible>false</visible></text>
+		<text name="md_lbl_playcount"><visible>false</visible></text>
+		<text name="md_publisher"><visible>false</visible></text>
+		<text name="md_players"><visible>false</visible></text>
+		<text name="md_playcount"><visible>false</visible></text>
+		<datetime name="md_releasedate"><visible>false</visible></datetime>
+		<datetime name="md_lastplayed"><visible>false</visible></datetime>
+		<image name="md_marquee"><visible>false</visible></image>
+
+		<helpsystem name="help">
+			<origin>1 1</origin>
+			<pos>0.9479 0.9306</pos>
+			<fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+			<fontSize>0.0241</fontSize>
+			<textColor>999999</textColor>
+			<iconColor>BBBBBB</iconColor>
+		</helpsystem>
+	</view>
+</theme>
