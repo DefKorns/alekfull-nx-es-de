@@ -1,0 +1,21 @@
+name: hmod
+
+on:
+  push:
+    tags: ['v*']
+  pull_request:
+    paths:
+      - Makefile
+      - mod/**
+      - .github/workflows/hmod.yml
+  workflow_dispatch:
+
+jobs:
+  hmod:
+    # Keep in sync with the vendor/hmod-build submodule tag.
+    uses: DefKorns/hmod-build/.github/workflows/hmod.yml@v1.8.1
+    with:
+      release-name: EmulationStation Theme - Alekfull NX
+    secrets: inherit
+    permissions:
+      contents: write
